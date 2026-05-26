@@ -8,26 +8,22 @@
 
 | Metric | Count |
 |--------|-------|
-| **Total Contributions** | {{TOTAL_CONTRIBUTIONS}} |
-| **Commits** | {{COMMITS}} |
-| **Repositories** | {{REPOSITORIES}} |
-| **Stars Received** | {{TOTAL_STARS}} |
-| **Pull Requests** | {{PULL_REQUESTS}} |
-| **Issues Created** | {{ISSUES}} |
-| **Followers** | {{FOLLOWERS}} |
-| **Following** | {{FOLLOWING}} |
+| **Total Contributions** | 80 |
+| **Commits** | 158 |
+| **Repositories** | 10 |
+| **Stars Received** | 9925 |
+| **Pull Requests** | 36 |
+| **Issues Created** | 0 |
+| **Followers** | 1 |
+| **Following** | 0 |
 
 ---
 
 ## 💻 Top Languages
 
 <!-- LANGUAGES_START -->
-- **JavaScript** 45% █████████░░░░░░░░░░
-- **Python** 30% ██████░░░░░░░░░░░░░░
-- **TypeScript** 15% ███░░░░░░░░░░░░░░░░
-- **HTML** 5% █░░░░░░░░░░░░░░░░░░
-- **CSS** 3% ░░░░░░░░░░░░░░░░░░░░
-- **Java** 2% ░░░░░░░░░░░░░░░░░░░░
+- **Python** 78% ███████████████░░░░░
+- **Shell** 22% ████░░░░░░░░░░░░░░░░
 <!-- LANGUAGES_END -->
 
 ---
@@ -35,10 +31,10 @@
 ## 🎯 Quick Stats Overview
 
 ```
-Contributions Last Year: {{TOTAL_CONTRIBUTIONS}}
-Commits Authored:        {{COMMITS}}
-Public Repositories:     {{REPOSITORIES}}
-Total Stars Earned:      {{TOTAL_STARS}}
+Contributions Last Year: 80
+Commits Authored:        158
+Public Repositories:     10
+Total Stars Earned:      9925
 ```
 
 ---
@@ -54,8 +50,8 @@ Total Stars Earned:      {{TOTAL_STARS}}
 
 ## 📈 Activity Breakdown
 
-**2024 Contributions**: {{TOTAL_CONTRIBUTIONS}} total  
-**Notable**: {{PULL_REQUESTS}} PRs | {{ISSUES}} Issues Created
+**2024 Contributions**: 80 total  
+**Notable**: 36 PRs | 0 Issues Created
 
 ---
 
@@ -65,6 +61,6 @@ Check out my repositories for full project details!
 
 ---
 
-Last updated: 2026-05-26 12:00:00 UTC
+Last updated: 2026-05-26 07:20:41 UTC
 
 *This README is automatically updated with live GitHub stats using GitHub Actions.*
