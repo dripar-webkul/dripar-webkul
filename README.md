@@ -20,15 +20,8 @@
 ## 💻 Top Languages
 
 <!-- LANGUAGES_START -->
-- **PHP** 30% ██████░░░░░░░░░░░░░░
-- **JavaScript** 25% █████░░░░░░░░░░░░░░░
-- **Vue** 15% ███░░░░░░░░░░░░░░░░░
-- **TypeScript** 10% ██░░░░░░░░░░░░░░░░░░
-- **Python** 8% █░░░░░░░░░░░░░░░░░░░
-- **Vite** 5% █░░░░░░░░░░░░░░░░░░░
-- **WordPress** 3% ░░░░░░░░░░░░░░░░░░░░
-- **HTML** 2% ░░░░░░░░░░░░░░░░░░░░
-- **CSS** 2% ░░░░░░░░░░░░░░░░░░░░
+- **Python** 78% ███████████████░░░░░
+- **Shell** 22% ████░░░░░░░░░░░░░░░░
 <!-- LANGUAGES_END -->
 
 ---
@@ -72,6 +65,6 @@ Check out my repositories for full project details!
 
 ---
 
-Last updated: 2026-05-26 07:20:41 UTC
+Last updated: 2026-05-26 07:32:05 UTC
 
 *This README is automatically updated with live GitHub stats using GitHub Actions.*
