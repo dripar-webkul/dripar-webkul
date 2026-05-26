@@ -1,7 +1,5 @@
 # Hi 👋, I'm Dripar
 
-**Dynamic GitHub Profile README** | Auto-updated with live stats
-
 ---
 
 ## 📊 GitHub Stats
@@ -22,8 +20,15 @@
 ## 💻 Top Languages
 
 <!-- LANGUAGES_START -->
-- **Python** 78% ███████████████░░░░░
-- **Shell** 22% ████░░░░░░░░░░░░░░░░
+- **PHP** 30% ██████░░░░░░░░░░░░░░
+- **JavaScript** 25% █████░░░░░░░░░░░░░░░
+- **Vue** 15% ███░░░░░░░░░░░░░░░░░
+- **TypeScript** 10% ██░░░░░░░░░░░░░░░░░░
+- **Python** 8% █░░░░░░░░░░░░░░░░░░░
+- **Vite** 5% █░░░░░░░░░░░░░░░░░░░
+- **WordPress** 3% ░░░░░░░░░░░░░░░░░░░░
+- **HTML** 2% ░░░░░░░░░░░░░░░░░░░░
+- **CSS** 2% ░░░░░░░░░░░░░░░░░░░░
 <!-- LANGUAGES_END -->
 
 ---
@@ -52,6 +57,12 @@ Total Stars Earned:      9925
 
 **2024 Contributions**: 80 total  
 **Notable**: 36 PRs | 0 Issues Created
+
+---
+
+## 🏆 Achievements
+
+- 🦈 **Pull Shark** — Opened pull requests that have been successfully merged
 
 ---
 
