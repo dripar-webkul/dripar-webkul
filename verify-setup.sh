@@ -28,27 +28,24 @@ for file in "${files[@]}"; do
 done
 
 echo ""
-echo "📝 Checking README placeholders..."
+echo "📝 Checking README structure..."
 echo ""
 
-if grep -q "{{TOTAL_CONTRIBUTIONS}}" README.md; then
-  echo "✅ Found {{TOTAL_CONTRIBUTIONS}}"
-else
-  echo "❌ Missing {{TOTAL_CONTRIBUTIONS}}"
-  all_good=false
-fi
+# Placeholders are replaced by the workflow on first run, so check section
+# headers and template-handle markers — those are stable across runs.
+for section in "## 📊 GitHub Stats" "## 💻 Top Languages" "## 🏆 Achievements"; do
+  if grep -qF "$section" README.md; then
+    echo "✅ Section present: $section"
+  else
+    echo "❌ Missing section: $section"
+    all_good=false
+  fi
+done
 
-if grep -q "{{COMMITS}}" README.md; then
-  echo "✅ Found {{COMMITS}}"
+if grep -q "<!-- LANGUAGES_START -->" README.md && grep -q "<!-- LANGUAGES_END -->" README.md; then
+  echo "✅ LANGUAGES markers present"
 else
-  echo "❌ Missing {{COMMITS}}"
-  all_good=false
-fi
-
-if grep -q "{{REPOSITORIES}}" README.md; then
-  echo "✅ Found {{REPOSITORIES}}"
-else
-  echo "❌ Missing {{REPOSITORIES}}"
+  echo "❌ LANGUAGES_START/END markers missing"
   all_good=false
 fi
 

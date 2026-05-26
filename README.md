@@ -55,7 +55,7 @@ Total Stars Earned:      9925
 
 ## 🏆 Achievements
 
-- 🦈 **Pull Shark** — Opened pull requests that have been successfully merged
+- 🦈 **Pull Shark {{PULL_SHARK_TIER}}** — {{MERGED_PRS}} pull requests successfully merged
 
 ---
 

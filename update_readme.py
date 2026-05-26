@@ -135,7 +135,7 @@ class GitHubStatsUpdater:
             return False
 
     def fetch_pull_requests(self):
-        """Fetch PR and issue counts"""
+        """Fetch PR and issue counts (plus merged PRs for Pull Shark tier)"""
         try:
             # PRs created by user
             prs_url = f"https://api.github.com/search/issues?q=author:{self.username}+type:pr"
@@ -149,12 +149,35 @@ class GitHubStatsUpdater:
             issues_resp.raise_for_status()
             self.stats["issues"] = issues_resp.json().get("total_count", 0)
 
+            # Merged PRs drive the Pull Shark achievement tier
+            merged_url = f"https://api.github.com/search/issues?q=author:{self.username}+type:pr+is:merged"
+            merged_resp = requests.get(merged_url, headers=self.headers, timeout=10)
+            merged_resp.raise_for_status()
+            merged = merged_resp.json().get("total_count", 0)
+            self.stats["merged_prs"] = merged
+            self.stats["pull_shark_tier"] = self._pull_shark_tier(merged)
+
             return True
         except Exception as e:
             print(f"Error fetching PR/Issue counts: {e}")
             self.stats["pull_requests"] = 0
             self.stats["issues"] = 0
+            self.stats["merged_prs"] = 0
+            self.stats["pull_shark_tier"] = ""
             return False
+
+    @staticmethod
+    def _pull_shark_tier(merged_count):
+        """Map merged-PR count to GitHub's Pull Shark badge tier."""
+        if merged_count >= 1024:
+            return "x4"
+        if merged_count >= 128:
+            return "x3"
+        if merged_count >= 16:
+            return "x2"
+        if merged_count >= 2:
+            return "x1"
+        return "(not yet earned)"
 
     def update_readme(self):
         """Read, update, and write README.md"""
@@ -172,6 +195,8 @@ class GitHubStatsUpdater:
                 "{{FOLLOWING}}": str(self.stats.get("following", 0)),
                 "{{PULL_REQUESTS}}": str(self.stats.get("pull_requests", 0)),
                 "{{ISSUES}}": str(self.stats.get("issues", 0)),
+                "{{MERGED_PRS}}": str(self.stats.get("merged_prs", 0)),
+                "{{PULL_SHARK_TIER}}": str(self.stats.get("pull_shark_tier", "")),
             }
 
             for placeholder, value in replacements.items():
